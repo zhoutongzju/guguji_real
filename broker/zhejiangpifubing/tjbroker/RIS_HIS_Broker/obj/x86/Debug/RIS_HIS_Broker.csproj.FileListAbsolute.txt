@@ -1,0 +1,12 @@
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\obj\x86\Debug\RISBroker.frmMain.resources
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\obj\x86\Debug\RISBroker.frmSetting.resources
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\obj\x86\Debug\RIS_HIS_Broker.Properties.Resources.resources
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\obj\x86\Debug\RIS_HIS_Broker.csproj.GenerateResource.Cache
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\bin\Debug\RIS_HIS_Broker.exe.config
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\bin\Debug\RIS_HIS_Broker.exe
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\bin\Debug\RIS_HIS_Broker.pdb
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\bin\Debug\DAHelper.dll
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\bin\Debug\DataAccessBase.dll
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\bin\Debug\iEIS.Age.dll
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\obj\x86\Debug\RIS_HIS_Broker.exe
+D:\项目\浙江省皮肤病医院\体检broker\RIS_HIS_Broker\obj\x86\Debug\RIS_HIS_Broker.pdb

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="RIS_HIS_Broker.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+            </sectionGroup>
+    </configSections>
+    <appSettings>
+      <!--ris数据库信息-->
+      <!--tns名称-->
+      <add key="ristnsname" value="ris"/>
+      <!--数据库登录名称-->
+      <add key="risuser" value="ris"/>
+      <!--数据库登录密码-->
+      <add key="rispassword" value="bWFyb2xhbmQ="/>
+      <!--轮询时间-->
+      <add key="ProverTime" value="500"/>
+      <!--定时启动-->
+      <add key="DStart" value="0"/>
+      <!--日志记录SQL-->
+      <add key="LogSql" value="0"/>
+      <!--定时启动时间-->
+      <add key="DTime" value=""/>
+      <!--开始时间-->
+      <add key="StartDate" value="2015-11-17"/>
+      <!--延迟时间-->
+      <add key="LateTime" value="5"/>
+      <!--代理IP-->
+      <add key="ProxyIP" value="172.16.1.155"/>
+      <!--代理端口-->
+      <add key="ProxyPort" value="6556"/>
+
+      <!--检查类型-->
+      <add key="EXAMTYPE-ES"  value="8"/>
+      <add key="EXAMTYPE-GM"  value="7"/>
+      <add key="EXAMTYPE-NM"  value="9"/>
+      <add key="EXAMTYPE-US"  value="6"/>
+      <add key="EXAMTYPE-CR"  value="4"/>
+      <add key="EXAMTYPE-DX"  value="4"/>
+      <add key="EXAMTYPE-DR"  value="4"/>
+      <add key="EXAMTYPE-CT"  value="1"/>
+      <add key="EXAMTYPE-MR"  value="2"/>
+      <add key="EXAMTYPE-MG"  value="10"/>
+      <add key="EXAMTYPE-XA"  value="3"/>
+      <add key="EXAMTYPE-RF"  value="5"/>
+    </appSettings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup><applicationSettings>
+    </applicationSettings>
+</configuration>
