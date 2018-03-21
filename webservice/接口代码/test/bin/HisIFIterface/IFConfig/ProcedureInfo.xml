@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gb2312"?>
+<configuration>
+  <Unity ColName="查看收费明细"   ClassDll="HisIFfrm.dll"    ClassNameSpace="HisIFfrm.frmHisBillingServ"/>
+  <Unity ColName="通费方式一"   ClassDll="Echo\\EchoProcedure.dll"    ClassNameSpace="EchoProcedure.server"/>
+  <Unity ColName="通费方式二"   ClassDll="Echo\\EchoProcedure.dll"    ClassNameSpace="EchoProcedure.server"/>
+  <Unity ColName="通费方式三"   ClassDll="Echo\\EchoProcedure.dll"    ClassNameSpace="EchoProcedure.server"/>
+  <Unity ColName="其他"        	ClassDll="Echo\\EchoProcedure.dll"    ClassNameSpace="EchoProcedure.server"/>
+</configuration>

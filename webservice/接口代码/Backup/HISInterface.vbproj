@@ -1,0 +1,255 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{4EBC89D3-3BA7-4565-B83C-8AAF4359EF4F}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "HISInterface"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "maroland.RIS.SystemInterface"
+                StartupObject = "maroland.RIS.SystemInterface.(нч)"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Data.OracleClient"
+                    AssemblyName = "System.Data.OracleClient"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.OracleClient.dll"
+                />
+                <Reference
+                    Name = "commonUtility"
+                    AssemblyName = "commonUtility"
+                    HintPath = "bin\commonUtility.dll"
+                />
+                <Reference
+                    Name = "SynthesizeIF"
+                    AssemblyName = "SynthesizeIF"
+                    HintPath = "bin\SynthesizeIF.dll"
+                />
+                <Reference
+                    Name = "log4net"
+                    AssemblyName = "log4net"
+                    HintPath = "bin\log4net.dll"
+                />
+                <Reference
+                    Name = "LogManager"
+                    AssemblyName = "LogManager"
+                    HintPath = "bin\LogManager.dll"
+                />
+                <Reference
+                    Name = "maroland.Base"
+                    AssemblyName = "maroland.Base"
+                    HintPath = "bin\maroland.Base.dll"
+                />
+                <Reference
+                    Name = "DAHelper"
+                    AssemblyName = "DAHelper"
+                    HintPath = "bin\DAHelper.dll"
+                />
+                <Reference
+                    Name = "ISynthesizeIF"
+                    AssemblyName = "ISynthesizeIF"
+                    HintPath = "bin\ISynthesizeIF.dll"
+                />
+                <Reference
+                    Name = "IEchoProcedure"
+                    AssemblyName = "IEchoProcedure"
+                    HintPath = "bin\IEchoProcedure.dll"
+                />
+                <Reference
+                    Name = "EchoProcedure"
+                    AssemblyName = "EchoProcedure"
+                    HintPath = "bin\EchoProcedure.dll"
+                />
+                <Reference
+                    Name = "Common"
+                    AssemblyName = "Common"
+                    HintPath = "bin\Common.dll"
+                />
+                <Reference
+                    Name = "SystemInterface"
+                    AssemblyName = "SystemInterface"
+                    HintPath = "bin\SystemInterface.dll"
+                />
+                <Reference
+                    Name = "FtpHelper"
+                    AssemblyName = "FtpHelper"
+                    HintPath = "bin\FtpHelper.dll"
+                />
+                <Reference
+                    Name = "C1.Win.C1Report"
+                    AssemblyName = "C1.Win.C1Report"
+                    HintPath = "bin\C1.Win.C1Report.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Diagnostics" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Common.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmHisBilling.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmHisBilling.resx"
+                    DependentUpon = "frmHisBilling.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmHisOrderPaper.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmHisOrderPaper.resx"
+                    DependentUpon = "frmHisOrderPaper.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmMessageBox.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmMessageBox.resx"
+                    DependentUpon = "frmMessageBox.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmMsgBackMoney.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmMsgBackMoney.resx"
+                    DependentUpon = "frmMsgBackMoney.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmOrderPaper.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmOrderPaper.resx"
+                    DependentUpon = "frmOrderPaper.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmPatientList.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmPatientList.resx"
+                    DependentUpon = "frmPatientList.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FtpClientHelper.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "HISInterface.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "HISInterface.xml"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

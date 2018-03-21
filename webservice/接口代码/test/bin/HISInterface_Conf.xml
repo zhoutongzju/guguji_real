@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312"?>
+<configuration>
+  <Unity ColName="ShowList_Out"    ColDesc="门诊：多张申请单，是否显示列表，即一次性登记(0:显示；1:不显示)"  ColSwitch="0"/>
+  <Unity ColName="ShowList_In"     ColDesc="住院：多张申请单，是否显示列表，即一次性登记(0:显示；1:不显示)"  ColSwitch="0"/>
+  <Unity ColName="ShowList_Exam"   ColDesc="体检：多张申请单，是否显示列表，即一次性登记(0:显示；1:不显示)"  ColSwitch="1"/>
+  
+  <Unity ColName="Choose_Out"    ColDesc="门诊：多张申请单，是否支持多选，按住Ctrl键多选(0:不支持；1:支持)"  ColSwitch="1"/>
+  <Unity ColName="Choose_In"     ColDesc="住院：多张申请单，是否支持多选，按住Ctrl键多选(0:不支持；1:支持)"  ColSwitch="1"/>
+  <Unity ColName="Choose_Exam"   ColDesc="体检：多张申请单，是否支持多选，按住Ctrl键多选(0:不支持；1:支持)"  ColSwitch="1"/>
+  <Unity ColName="HQWSUrl"   ColDesc=""  ColSwitch="http://localhost:53134/TESTHQ.asmx"/>
+  <Unity ColName="HQWSClassName"   ColDesc=""  ColSwitch="TESTHQ"/>
+  <Unity ColName="HQWSPassword"   ColDesc=""  ColSwitch="hqlyfxdjc-"/>
+</configuration>

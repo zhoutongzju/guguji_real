@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="gb2312"?>
+<configuration>
+  <project ProName="IEIS电子申请单">
+    <Interface Name="formatPatientID" Desc="病人ID解析" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlView" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="病人ID解析" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="GetCharge" Desc="查看收费细则" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlView" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="查看收费细则" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatName(病人姓名)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItem(检查项目)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ChargeCode(细则-收费代码)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ChargeName(细则-收费名称)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ChargeTime(细则-收费时间)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ChargeNum(细则-数量)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ChargeUnitPrice(细则-单价)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="his_id(HISID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="modality(模态号)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="getOutHisOrder" Desc="门诊电子单" Return="UnNormal" ReturnType="bool" ReturnValue="true" SqlType="WebServiceCtrl" SqlSentence="" DataUrl="http://localhost:53134/TESTHQ1.asmx" DataClassName="TESTHQ" DataMethod="getOrderByBarcode" ApplyGroupsName="orderinfo" ApplyName="orderinfo">
+      <UnityFrom>
+        <Unity UnityCheck="true" UnityName="orderno" UnityDivide="" UnityChild="" UnityLinkName="HIS_ID()" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="nametype" UnityDivide="" UnityChild="" UnityLinkName="Modality(模态号)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="patientid" UnityDivide="" UnityChild="" UnityLinkName="PATIENTID()" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="pname" UnityDivide="" UnityChild="" UnityLinkName="PatName(病人姓名)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="idunum" UnityDivide="" UnityChild="" UnityLinkName="IDCard(ID卡)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="psex" UnityDivide="" UnityChild="" UnityLinkName="PatSex(病人性别)" UnityDefine="">
+          <SubUnity SubUnitySrc="M" SubUnityValue="男" />
+          <SubUnity SubUnitySrc="F" SubUnityValue="女" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="page" UnityDivide="" UnityChild="" UnityLinkName="PatAge(病人年龄)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="pbirthdate" UnityDivide="" UnityChild="" UnityLinkName="PatBirthday(病人出生日期)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="ptelno" UnityDivide="" UnityChild="" UnityLinkName="TelephoneNo(电话号码)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="paddress" UnityDivide="" UnityChild="" UnityLinkName="Address(家庭住址)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="orderlevel" UnityDivide="" UnityChild="" UnityLinkName="PatType(病人类型)" UnityDefine="">
+          <SubUnity SubUnitySrc="普通" SubUnityValue="普通" />
+          <SubUnity SubUnitySrc="急诊E" SubUnityValue="紧急" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="deptid" UnityDivide="" UnityChild="" UnityLinkName="ClinicID(科室ID)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="deptname" UnityDivide="" UnityChild="" UnityLinkName="Clinic(科室)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="sheetdate " UnityDivide="" UnityChild="" UnityLinkName="OrderDT(送检时间)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="doctorname" UnityDivide="" UnityChild="" UnityLinkName="OrderDr(送检医生)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="doctorid" UnityDivide="" UnityChild="" UnityLinkName="OrderDrID(送检医生ID)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="wardid" UnityDivide="" UnityChild="" UnityLinkName="WardID(病区ID)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="wardname" UnityDivide="" UnityChild="" UnityLinkName="Ward(病区)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="diagname" UnityDivide="" UnityChild="" UnityLinkName="Disease(传染病)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="chiefcomplaint" UnityDivide="" UnityChild="" UnityLinkName="AnamnesisRemark(IEIS病史摘要)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="patientid" UnityDivide="" UnityChild="" UnityLinkName="OutpatientID(门诊号)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="OrderType()" UnityDefine="1001">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="itemcode" UnityDivide="" UnityChild="examitems" UnityLinkName="ExamItemID(检查项目ID)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="itemname" UnityDivide="" UnityChild="examitems" UnityLinkName="ExamItem(检查项目)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="Charge(价格)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="medrcdno" UnityDivide="" UnityChild="" UnityLinkName="InpatientID(住院号)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="PostCode(邮编)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="Occupation(职业)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="Country(国籍)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="Nationality(民族)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="OrderLevel()" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="PhysicalExamID(体检号)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityFrom>
+      <UnityTo>
+        <Unity UnityCheck="true" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityType="自定义" UnityData="hqlyfxdjc-1" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityType="patientID(病人ID)" UnityData="barcode" UnityBegin="" UnityEnd="" UnityTest="10450">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityTo>
+    </Interface>
+    <Interface Name="getOutPatientInfo" Desc="门诊电子手工单" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlView" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PATIENTID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="patientID(病人ID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="InpatientID(住院号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatName(病人姓名)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="IDCard(ID卡)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatType(病人类型)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatSex(病人性别)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatBirthday(病人出生日期)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatAge(病人年龄)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Address(家庭住址)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="TelephoneNo(电话号码)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderType()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="1000">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItemID(检查项目ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItem(检查项目)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDrID(送检医生ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDr(送检医生)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OutpatientID(门诊号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Disease(传染病)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="HIS_ID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PostCode(邮编)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Occupation(职业)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Country(国籍)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Nationality(民族)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ClinicID(科室ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Clinic(科室)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PhysicalExamID(体检号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Charge(价格)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="getInHisOrder" Desc="住院电子单" Return="UnNormal" ReturnType="bool" ReturnValue="true" SqlType="WebServiceCtrl" SqlSentence="" DataUrl="http://127.0.0.1" DataClassName="TestClass" DataMethod="TestMethod" ApplyGroupsName="orderinfo" ApplyName="orderinfo">
+      <UnityFrom>
+        <Unity UnityCheck="true" UnityName="PatientID" UnityDivide="" UnityChild="" UnityLinkName="PATIENTID()" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="orderno" UnityDivide="" UnityChild="" UnityLinkName="HIS_ID()" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="PatientID" UnityDivide="" UnityChild="" UnityLinkName="InOutpatientID(住院/门诊号)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="pname" UnityDivide="" UnityChild="" UnityLinkName="PatName(病人姓名)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="idunum" UnityDivide="" UnityChild="" UnityLinkName="IDCard(ID卡)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="Occupation(职业)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="Country(国籍)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="Nationality(民族)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="orderlevel" UnityDivide="" UnityChild="" UnityLinkName="PatType(病人类型)" UnityDefine="">
+          <SubUnity SubUnitySrc="普通" SubUnityValue="普通" />
+          <SubUnity SubUnitySrc="急诊E" SubUnityValue="紧急" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="psex" UnityDivide="" UnityChild="" UnityLinkName="PatSex(病人性别)" UnityDefine="">
+          <SubUnity SubUnitySrc="F" SubUnityValue="男" />
+          <SubUnity SubUnitySrc="M" SubUnityValue="女" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="pbirthdate" UnityDivide="" UnityChild="" UnityLinkName="PatBirthday(病人出生日期)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="paddress" UnityDivide="" UnityChild="" UnityLinkName="Address(家庭住址)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="PostCode(邮编)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="ptelno" UnityDivide="" UnityChild="" UnityLinkName="TelephoneNo(电话号码)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="OrderType()" UnityDefine="1001">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="doctorid" UnityDivide="" UnityChild="" UnityLinkName="OrderDrID(送检医生ID)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="doctorname" UnityDivide="" UnityChild="" UnityLinkName="OrderDr(送检医生)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="sheetdate " UnityDivide="" UnityChild="" UnityLinkName="OrderDT(送检时间)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="nametype" UnityDivide="" UnityChild="" UnityLinkName="Modality(模态号)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="itemcode" UnityDivide="" UnityChild="examitems" UnityLinkName="ExamItemID(检查项目ID)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="itemname" UnityDivide="" UnityChild="examitems" UnityLinkName="ExamItem(检查项目)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="Charge(价格)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="deptid" UnityDivide="" UnityChild="" UnityLinkName="ClinicID(科室ID)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="deptname" UnityDivide="" UnityChild="" UnityLinkName="Clinic(科室)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="wardid" UnityDivide="" UnityChild="" UnityLinkName="WardID(病区ID)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="wardname" UnityDivide="" UnityChild="" UnityLinkName="Ward(病区)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="bedno" UnityDivide="" UnityChild="" UnityLinkName="BedNo(床号)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="diagname" UnityDivide="" UnityChild="" UnityLinkName="Disease(传染病)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="chiefcomplaint" UnityDivide="" UnityChild="" UnityLinkName="PatComplaint(病人主诉)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="chiefcomplaint" UnityDivide="" UnityChild="" UnityLinkName="AnamnesisRemark(IEIS病史摘要)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnityName="roomno" UnityDivide="" UnityChild="" UnityLinkName="SickRoom(病房)" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityFrom>
+      <UnityTo>
+        <Unity UnityCheck="true" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityType="自定义" UnityData="password" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityType="patientID(病人ID)" UnityData="" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityTo>
+    </Interface>
+    <Interface Name="getInPatientInformation" Desc="住院电子手工单" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlView" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PATIENTID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="patientID(病人ID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="HIS_ID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="InpatientID(住院号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatName(病人姓名)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="IDCard(ID卡)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Occupation(职业)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Country(国籍)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Nationality(民族)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatType(病人类型)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatSex(病人性别)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatBirthday(病人出生日期)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Address(家庭住址)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PostCode(邮编)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="TelephoneNo(电话号码)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderType()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="1000">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDrID(送检医生ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDr(送检医生)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDT(送检时间)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Modality(模态号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItemID(检查项目ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamDr(送检医生)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItem(检查项目)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Charge(价格)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ClinicID(科室ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Clinic(科室)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="WardID(病区ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Ward(病区)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="BedNo(床号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Disease(传染病)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OutpatientID(门诊号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PhysicalExamID(体检号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatAge(病人年龄)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="GetPhisicalFSPatient" Desc="体检电子单" Return="UnNormal" ReturnType="bool" ReturnValue="true" SqlType="SqlView" SqlSentence="select view_hh_pacsjk.DJLSH PATIENTID, view_hh_pacsjk.DJLSH HIS_ID, view_hh_pacsjk.XM PatName, '' IDCard, '' PatType, case view_hh_pacsjk.XB when '1' then 'M'  when '0' then 'F'  when '%' then 'O' else view_hh_pacsjk.XB end  PatSex, view_hh_pacsjk.CSNYR PatBirthday, view_hh_pacsjk.NL PatAge, '' Address, '' TelephoneNo, '' OrderType, view_hh_pacsjk.TJXMBH ExamItemID, view_hh_pacsjk.MC ExamItem, '' ExamDr, '' OrderDrID, '' OrderDr, '' OrderDT, '' OutpatientID, view_hh_pacsjk.MT Modality, '' Disease, '' PostCode, '' Occupation, '' Country, '' Nationality, '' ClinicID, '' Clinic, '' InpatientID, '' Charge, view_hh_pacsjk.TJLX , view_hh_pacsjk.DJLSH PhysicalExamID from view_hh_pacsjk where view_hh_pacsjk.DJLSH = '{0}' and view_hh_pacsjk.MT = '{1}' and view_hh_pacsjk.TJLX = '1001'" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="DJLSH" UnityLinkName="PATIENTID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="patientID(病人ID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="DJLSH" UnityLinkName="HIS_ID()" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="view_hh_pacsjk" UnityColName="TJBH" UnityLinkName="OutpatientID(门诊号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="XM" UnityLinkName="PatName(病人姓名)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="IDCard(ID卡)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="PatType(病人类型)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="XB" UnityLinkName="PatSex(病人性别)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="M" SubUnityValue="1" />
+        <SubUnity SubUnitySrc="F" SubUnityValue="0" />
+        <SubUnity SubUnitySrc="O" SubUnityValue="%" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="CSNYR" UnityLinkName="PatBirthday(病人出生日期)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="NL" UnityLinkName="PatAge(病人年龄)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="Address(家庭住址)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="TelephoneNo(电话号码)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="OrderType()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="TJXMBH" UnityLinkName="ExamItemID(检查项目ID)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="MC" UnityLinkName="ExamItem(检查项目)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="ExamDr(送检医生)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="OrderDrID(送检医生ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="OrderDr(送检医生)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="OrderDT(送检时间)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="OutpatientID(门诊号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="MT" UnityLinkName="Modality(模态号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="modality(模态号)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="Disease(传染病)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="PostCode(邮编)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="Occupation(职业)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="Country(国籍)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="Nationality(民族)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="ClinicID(科室ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="Clinic(科室)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="InpatientID(住院号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="" UnityColName="" UnityLinkName="Charge(价格)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="TJLX" UnityLinkName="(空)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="1001">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="view_hh_pacsjk" UnityColName="DJLSH" UnityLinkName="PhysicalExamID(体检号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="getPhisicalExamInformation" Desc="体检电子手工单" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlView" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PATIENTID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="patientID(病人ID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="HIS_ID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PhysicalExamID(体检号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatName(病人姓名)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="IDCard(ID卡)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Occupation(职业)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatType(病人类型)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatSex(病人性别)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatBirthday(病人出生日期)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatAge(病人年龄)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Address(家庭住址)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="TelephoneNo(电话号码)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderType()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="1000">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItemID(检查项目ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItem(检查项目)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDrID(送检医生ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDr(送检医生)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OutpatientID(门诊号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Disease(传染病)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PostCode(邮编)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Country(国籍)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Nationality(民族)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ClinicID(科室ID)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Clinic(科室)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="InpatientID(住院号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Charge(价格)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.patientID(病人ID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="viewApplicationOut" Desc="查看申请单-门诊" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlView" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PATIENTID()" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="HIS_ID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="his_id(HISID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OutpatientID(门诊号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatName(病人姓名)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="IDCard(ID卡)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Occupation(职业)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Country(国籍)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Nationality(民族)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatType(病人类型)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatSex(病人性别)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatBirthday(病人出生日期)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Modality(模态号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatAge(病人年龄)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Address(家庭住址)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PostCode(邮编)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="TelephoneNo(电话号码)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderType()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="1001">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderLevel()" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDrID(送检医生ID)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDr(送检医生)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDT(送检时间)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItemID(检查项目ID)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamDr(送检医生)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItem(检查项目)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Charge(价格)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ClinicID(科室ID)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Clinic(科室)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Disease(传染病)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="InpatientID(住院号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PhysicalExamID(体检号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="AnamnesisRemark(IEIS病史摘要)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="viewApplicationIn" Desc="查看申请单-住院" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlView" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PATIENTID()" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="HIS_ID()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="his_id(HISID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="InpatientID(住院号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatName(病人姓名)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="IDCard(ID卡)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Occupation(职业)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Country(国籍)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Nationality(民族)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatType(病人类型)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatSex(病人性别)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatBirthday(病人出生日期)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Address(家庭住址)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PostCode(邮编)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="TelephoneNo(电话号码)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderType()" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="1001">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDrID(送检医生ID)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDr(送检医生)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OrderDT(送检时间)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Modality(模态号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItemID(检查项目ID)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamDr(送检医生)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ExamItem(检查项目)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Charge(价格)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="ClinicID(科室ID)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Clinic(科室)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="WardID(病区ID)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Ward(病区)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="BedNo(床号)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="Disease(传染病)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="OutpatientID(门诊号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PhysicalExamID(体检号)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatAge(病人年龄)" UnityType="varchar" UnityWhere="=" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="自定义" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="AnamnesisRemark(IEIS病史摘要)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="PatComplaint(病人主诉)" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+  </project>
+  <projectBase ProName="">
+    <InterfaceWebs Name="" Desc="" Return="" ReturnType="" SqlSentence="" ReturnValue="" SqlType="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <UnityTo>
+        <Unity UnityCheck="false" UnitySelect="" UnityType="" UnityData="" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityTo>
+      <UnityFrom>
+        <Unity UnityCheck="false" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityFrom>
+    </InterfaceWebs>
+    <InterfaceDB Name="" Desc="" Return="" ReturnType="" SqlSentence="" ReturnValue="" SqlType="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="病人ID解析" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect="" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </InterfaceDB>
+  </projectBase>
+</configuration>

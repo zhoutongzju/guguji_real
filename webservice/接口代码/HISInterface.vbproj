@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4EBC89D3-3BA7-4565-B83C-8AAF4359EF4F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>HISInterface</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>maroland.RIS.SystemInterface</RootNamespace>
+    <StartupObject>maroland.RIS.SystemInterface.%28无%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>HISInterface.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>HISInterface.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1Report">
+      <Name>C1.Win.C1Report</Name>
+      <HintPath>bin\C1.Win.C1Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Common">
+      <Name>Common</Name>
+      <HintPath>bin\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="commonUtility">
+      <Name>commonUtility</Name>
+      <HintPath>bin\commonUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="DAHelper">
+      <Name>DAHelper</Name>
+      <HintPath>bin\DAHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="EchoProcedure">
+      <Name>EchoProcedure</Name>
+      <HintPath>bin\EchoProcedure.dll</HintPath>
+    </Reference>
+    <Reference Include="FtpHelper">
+      <Name>FtpHelper</Name>
+      <HintPath>bin\FtpHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="IEchoProcedure">
+      <Name>IEchoProcedure</Name>
+      <HintPath>bin\IEchoProcedure.dll</HintPath>
+    </Reference>
+    <Reference Include="ISynthesizeIF">
+      <Name>ISynthesizeIF</Name>
+      <HintPath>bin\ISynthesizeIF.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <Name>log4net</Name>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="LogManager">
+      <Name>LogManager</Name>
+      <HintPath>bin\LogManager.dll</HintPath>
+    </Reference>
+    <Reference Include="maroland.Base">
+      <Name>maroland.Base</Name>
+      <HintPath>bin\maroland.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="SynthesizeIF">
+      <Name>SynthesizeIF</Name>
+      <HintPath>bin\SynthesizeIF.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="SystemInterface">
+      <Name>SystemInterface</Name>
+      <HintPath>bin\SystemInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmHisBilling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisOrderPaper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsgBackMoney.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderPaper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatientList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FtpClientHelper.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HISInterface.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmHisBilling.resx">
+      <DependentUpon>frmHisBilling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisOrderPaper.resx">
+      <DependentUpon>frmHisOrderPaper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgBackMoney.resx">
+      <DependentUpon>frmMsgBackMoney.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderPaper.resx">
+      <DependentUpon>frmOrderPaper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatientList.resx">
+      <DependentUpon>frmPatientList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HISInterface.xml" />
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

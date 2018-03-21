@@ -1,0 +1,869 @@
+
+--------------------------------------------------------------------------------
+2016-07-19 10:48:41,949 [24960] ERROR [(null)] - 初始化HIS接口对象时发生错误 at mscorlib.WinIOError
+--------------------------------------------------------------------------------
+System.IO.DirectoryNotFoundException: 未找到路径“E:\绍兴蓝亭卫生院PACS体检接口\接口代码\test\bin\HisIFIterface\\IFConfig\\IFInfo”的一部分。
+   at System.IO.__Error.WinIOError(Int32 errorCode, String str)
+   at System.IO.Directory.InternalGetFileDirectoryNames(String fullPath, String userPath, Boolean file)
+   at System.IO.Directory.InternalGetFiles(String path, String userPath, String searchPattern)
+   at System.IO.Directory.GetFiles(String path, String searchPattern)
+   at System.IO.Directory.GetFiles(String path)
+   at SynthesizeIF.Synthesize.init(String xmlFile, String xmlRelatePath)
+   at maroland.RIS.SystemInterface.HISInterface..ctor() in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 97
+
+--------------------------------------------------------------------------------
+2016-07-19 10:51:38,132 [25560] ERROR [(null)] - 初始化HIS接口对象时发生错误 at mscorlib.WinIOError
+--------------------------------------------------------------------------------
+System.IO.DirectoryNotFoundException: 未找到路径“E:\绍兴蓝亭卫生院PACS体检接口\接口代码\test\bin\HisIFIterface\\IFConfig\\IFInfo”的一部分。
+   at System.IO.__Error.WinIOError(Int32 errorCode, String str)
+   at System.IO.Directory.InternalGetFileDirectoryNames(String fullPath, String userPath, Boolean file)
+   at System.IO.Directory.InternalGetFiles(String path, String userPath, String searchPattern)
+   at System.IO.Directory.GetFiles(String path, String searchPattern)
+   at System.IO.Directory.GetFiles(String path)
+   at SynthesizeIF.Synthesize.init(String xmlFile, String xmlRelatePath)
+   at maroland.RIS.SystemInterface.HISInterface..ctor() in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 97
+
+--------------------------------------------------------------------------------
+2016-07-19 10:51:50,678 [25560] ERROR [(null)] - 获取门诊电子单，获取HIS数据包10450：开始
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 10:51:50,686 [25560] ERROR [(null)] - 门诊电子单 at SynthesizeIF.IFAchieve
+--------------------------------------------------------------------------------
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   at SynthesizeIF.Synthesize.IFAchieve(String confType, String DBConnectStrin, IDictionary paras, DataTable& reDT, Int32 dbType)
+   at maroland.RIS.SystemInterface.HISInterface.getOutPatientInfo(String patientID, String patType, String modality, String examType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 940
+
+--------------------------------------------------------------------------------
+2016-07-19 10:52:50,742 [25568] ERROR [(null)] - 初始化HIS接口对象时发生错误 at mscorlib.WinIOError
+--------------------------------------------------------------------------------
+System.IO.DirectoryNotFoundException: 未找到路径“E:\绍兴蓝亭卫生院PACS体检接口\接口代码\test\bin\HisIFIterface\\IFConfig\\IFInfo”的一部分。
+   at System.IO.__Error.WinIOError(Int32 errorCode, String str)
+   at System.IO.Directory.InternalGetFileDirectoryNames(String fullPath, String userPath, Boolean file)
+   at System.IO.Directory.InternalGetFiles(String path, String userPath, String searchPattern)
+   at System.IO.Directory.GetFiles(String path, String searchPattern)
+   at System.IO.Directory.GetFiles(String path)
+   at SynthesizeIF.Synthesize.init(String xmlFile, String xmlRelatePath)
+   at maroland.RIS.SystemInterface.HISInterface..ctor() in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 97
+
+--------------------------------------------------------------------------------
+2016-07-19 10:57:32,075 [23624] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:10:11,188 [21700] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:11:15,673 [21700] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:12:46,100 [13704] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:15:20,893 [25432] ERROR [(null)] - 获取住院电子单，获取HIS数据包10450：开始
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:15:21,304 [25432] ERROR [(null)] - 住院电子单 at SynthesizeIF.GetData
+--------------------------------------------------------------------------------
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   at SynthesizeIF.WebServices.WebServ.GetData(Object[] oParas)
+   at SynthesizeIF.Synthesize.IFAchieve(String confType, String DBConnectStrin, IDictionary paras, DataTable& reDT, Int32 dbType)
+   at maroland.RIS.SystemInterface.HISInterface.getInPatientInformation(String patientID, String patType, String modality, String examType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 867
+
+--------------------------------------------------------------------------------
+2016-07-19 11:15:38,590 [25432] ERROR [(null)] - 获取住院电子单，获取HIS数据包10450：开始
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:15:38,597 [25432] ERROR [(null)] - 住院电子单 at SynthesizeIF.GetData
+--------------------------------------------------------------------------------
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   at SynthesizeIF.WebServices.WebServ.GetData(Object[] oParas)
+   at SynthesizeIF.Synthesize.IFAchieve(String confType, String DBConnectStrin, IDictionary paras, DataTable& reDT, Int32 dbType)
+   at maroland.RIS.SystemInterface.HISInterface.getInPatientInformation(String patientID, String patType, String modality, String examType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 867
+
+--------------------------------------------------------------------------------
+2016-07-19 11:15:45,198 [25432] ERROR [(null)] - 获取住院电子单，获取HIS数据包10450：开始
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:15:45,204 [25432] ERROR [(null)] - 住院电子单 at SynthesizeIF.GetData
+--------------------------------------------------------------------------------
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   at SynthesizeIF.WebServices.WebServ.GetData(Object[] oParas)
+   at SynthesizeIF.Synthesize.IFAchieve(String confType, String DBConnectStrin, IDictionary paras, DataTable& reDT, Int32 dbType)
+   at maroland.RIS.SystemInterface.HISInterface.getInPatientInformation(String patientID, String patType, String modality, String examType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 867
+
+--------------------------------------------------------------------------------
+2016-07-19 11:15:45,846 [25432] ERROR [(null)] - 获取住院电子单，获取HIS数据包10450：开始
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:15:45,858 [25432] ERROR [(null)] - 住院电子单 at SynthesizeIF.GetData
+--------------------------------------------------------------------------------
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   at SynthesizeIF.WebServices.WebServ.GetData(Object[] oParas)
+   at SynthesizeIF.Synthesize.IFAchieve(String confType, String DBConnectStrin, IDictionary paras, DataTable& reDT, Int32 dbType)
+   at maroland.RIS.SystemInterface.HISInterface.getInPatientInformation(String patientID, String patType, String modality, String examType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 867
+
+--------------------------------------------------------------------------------
+2016-07-19 11:16:13,004 [25432] ERROR [(null)] - 获取住院电子单，获取HIS数据包10450：开始
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:17:03,681 [24508] ERROR [(null)] - 获取住院电子单，获取HIS数据包10450：开始
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:17:54,688 [23684] ERROR [(null)] - getOrdersByPatientid--<orderlist>
+	                    <oneorder>
+		                    <orderno>10450</orderno>
+		                    <ordername>X光申请</ordername>
+		                    <orderdate>2012-06-06</orderdate>
+		                    <status>已收费</status>
+	                    </oneorder>
+                    </orderlist>
+                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:17:55,836 [23684] ERROR [(null)] - GetHQOrderList失败，模态CR，sPatientID：10450 at HISInterface.GetHQOrderList
+--------------------------------------------------------------------------------
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   at maroland.RIS.SystemInterface.HISInterface.GetHQOrderList(String sPatientID, String sModality, String sPatType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1169
+
+--------------------------------------------------------------------------------
+2016-07-19 11:18:31,585 [23684] ERROR [(null)] - getOrdersByPatientid--<orderlist>
+	                    <oneorder>
+		                    <orderno>10450</orderno>
+		                    <ordername>X光申请</ordername>
+		                    <orderdate>2012-06-06</orderdate>
+		                    <status>已收费</status>
+	                    </oneorder>
+                    </orderlist>
+                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:20:00,867 [24260] ERROR [(null)] - getOrdersByPatientid--<orderlist>
+	                    <oneorder>
+		                    <orderno>10450</orderno>
+		                    <ordername>X光申请</ordername>
+		                    <orderdate>2012-06-06</orderdate>
+		                    <status>已收费</status>
+	                    </oneorder>
+                    </orderlist>
+                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:20:02,337 [24260] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:20:17,519 [24260] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:20:50,115 [24260] ERROR [(null)] - getOrdersByPatientid--<orderlist>
+	                    <oneorder>
+		                    <orderno>10450</orderno>
+		                    <ordername>X光申请</ordername>
+		                    <orderdate>2012-06-06</orderdate>
+		                    <status>已收费</status>
+	                    </oneorder>
+                    </orderlist>
+                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:20:53,107 [24260] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:20:55,900 [24260] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:21:30,665 [24260] ERROR [(null)] - getOrdersByPatientid--<orderlist>
+	                    <oneorder>
+		                    <orderno>10450</orderno>
+		                    <ordername>X光申请</ordername>
+		                    <orderdate>2012-06-06</orderdate>
+		                    <status>已收费</status>
+	                    </oneorder>
+                    </orderlist>
+                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:22:17,612 [24260] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:22:20,333 [24260] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:22:56,939 [24260] ERROR [(null)] - getOrdersByPatientid--<orderlist>
+	                    <oneorder>
+		                    <orderno>10450</orderno>
+		                    <ordername>X光申请</ordername>
+		                    <orderdate>2012-06-06</orderdate>
+		                    <status>已收费</status>
+	                    </oneorder>
+                    </orderlist>
+                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:27:03,277 [11212] ERROR [(null)] - getOrdersByPatientid--<orderlist>
+	                    <oneorder>
+		                    <orderno>10450</orderno>
+		                    <ordername>X光申请</ordername>
+		                    <orderdate>2012-06-06</orderdate>
+		                    <status>已收费</status>
+	                    </oneorder>
+                    </orderlist>
+                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:27:10,917 [11212] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:35:44,687 [252] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-19 11:37:40,661 [24436] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10450</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>DR</nametype>             
+	                                <patientid>200198</patientid>
+	                                <medrcdno>200198</medrcdno >
+	                                <pname>张小明</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------

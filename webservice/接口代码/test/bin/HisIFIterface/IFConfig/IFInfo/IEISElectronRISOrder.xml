@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="gb2312"?>
+<configuration>
+  <project ProName="IEIS电子单通费">
+    <Interface Name="preRISOrderSavedOut" Desc="门诊-登记前-通费" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderSavedOut" Desc="门诊-登记后-通费" Return="UnNormal" ReturnType="bool" ReturnValue="true" SqlType="WebServiceCtrl" SqlSentence="" DataUrl="http://127..1.1:8080" DataClassName="TestClass" DataMethod="updateOrderStatus" ApplyGroupsName="" ApplyName="">
+      <UnityFrom>
+        <Unity UnityCheck="false" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityFrom>
+      <UnityTo>
+        <Unity UnityCheck="true" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityType="自定义" UnityData="password" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityType="his_id(HISID)" UnityData="" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityTo>
+    </Interface>
+    <Interface Name="postRISOrderSavedReportOut" Desc="门诊-保存报告后" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="preRISOrderDeletedOut" Desc="门诊-删除前-退费" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderDeletedOut" Desc="门诊-删除后-退费" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="preRISOrderSavedIn" Desc="住院-登记前-通费" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderSavedIn" Desc="住院-登记后-通费" Return="UnNormal" ReturnType="bool" ReturnValue="true" SqlType="WebServiceCtrl" SqlSentence="" DataUrl="http:127.0.0.1 : 8080" DataClassName="TestClass" DataMethod="updateOrderStatus" ApplyGroupsName="" ApplyName="">
+      <UnityFrom>
+        <Unity UnityCheck="false" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityFrom>
+      <UnityTo>
+        <Unity UnityCheck="true" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityType="自定义" UnityData="password" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+        <Unity UnityCheck="true" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityType="his_id(HISID)" UnityData="" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityTo>
+    </Interface>
+    <Interface Name="postRISOrderSavedReportIn" Desc="住院-保存报告后" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="preRISOrderDeletedIn" Desc="住院-删除前-退费" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderDeletedIn" Desc="住院-删除后-退费" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="preRISOrderSavedPhysical" Desc="体检-登记前-通费" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderSavedPhysical" Desc="体检-登记后-通费" Return="UnNormal" ReturnType="bool" ReturnValue="true" SqlType="SqlExecute" SqlSentence="execute SP_PACS_ORDER_STATUS('{0}', '{1}', '{2}', '{3}', '1')" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="his_id(HISID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="Status(登记状态)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="OperateID(操作人ID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="OperateDT(操作日期时间)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="自定义" UnityVague="" UnityCont="1">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderSavedReportPhysical" Desc="体检-保存报告后" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="preRISOrderDeletedPhysical" Desc="体检-删除前-退费" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderDeletedPhysical" Desc="体检-删除后-退费" Return="UnNormal" ReturnType="bool" ReturnValue="true" SqlType="SqlExecute" SqlSentence="execute SP_PACS_ORDER_STATUS('{0}', '{1}', '{2}', '{3}', '1')" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="his_id(HISID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="Status(登记状态)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="OperateID(操作人ID)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="OperateDT(操作日期时间)" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+      <Unity UnityCheck="true" UnityTableName="SP_PACS_ORDER_STATUS" UnityColName="" UnityLinkName="" UnityType="varchar" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.his_id(HISID).Status(登记状态).OperateID(操作人ID).OperateDT(操作日期时间)" UnityDefine="自定义" UnityVague="" UnityCont="1">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+  </project>
+  <projectBase ProName="">
+    <InterfaceWebs Name="" Desc="" Return="" ReturnType="" SqlSentence="" ReturnValue="" SqlType="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <UnityTo>
+        <Unity UnityCheck="false" UnitySelect="" UnityType="" UnityData="" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityTo>
+      <UnityFrom>
+        <Unity UnityCheck="false" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityFrom>
+    </InterfaceWebs>
+    <InterfaceDB Name="" Desc="" Return="" ReturnType="" SqlSentence="" ReturnValue="" SqlType="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="病人ID解析" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect="" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </InterfaceDB>
+  </projectBase>
+</configuration>

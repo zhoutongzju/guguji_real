@@ -1,0 +1,87 @@
+
+--------------------------------------------------------------------------------
+2016-07-20 19:09:02,454 [952] ERROR [(null)] - getOrderByBarcode--<orderinfo>
+	                                <orderno>10452</orderno> 
+                                <ordername>X光申请</ordername>       
+                                <nametype>CT</nametype>             
+	                                <patientid>200122</patientid>
+	                                <medrcdno>200122</medrcdno >
+	                                <pname>张小</pname>
+                                <idunum>4115241900210110</idunum>
+	                                <psex>男</psex>
+	                                <page>34</page>
+	                                <pbirthdate>1980-01-01</pbirthdate>
+	                                <ptelno>0571-88912351</ptelno>
+	                                <paddress>XXX镇XX村</paddress>
+                                <roomno>201</roomno>
+	                                <bedno>20101</bedno>
+	                                <status>已收费</status>
+	                                <orderlevel>普通</orderlevel>
+	                                <pattype>门诊</pattype>
+	                                <deptid>100501</deptid>
+	                                <deptname>全科门诊</deptname>
+	                                <wardid>100502</wardid>
+	                                <wardname>综合病区</wardname>
+	                                <sheetdate> 2014-12-11</sheetdate>
+	                                <examitems>
+		                                <oneitem>
+			                                <itemcode>110</itemcode>
+			                                <itemname>颅脑CT平扫</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+                                        <oneitem>
+			                                <itemcode>611</itemcode>
+			                                <itemname>上颌骨轴位</itemname>
+                                <itempos>头颅</itempos>
+                               <itempos4organ>右肺，左肺</itempos4organ>
+		                                </oneitem>
+	                                </examitems>
+	                                <doctorid>0703</doctorid>
+	                                <doctorname>王医生</doctorname>
+	                                <performdeptid>100502</performdeptid>
+	                                <performdept>放射科</performdept>
+	                                <diagno> 429.901</diagno>
+	                                <diagname>心脏病</diagname>
+	                                <chiefcomplaint>XXXX</chiefcomplaint>
+	                                <symptom>XXXXX</symptom>
+	                                <examrequest>XXXXX</examrequest> 
+	                                <remark>XXXXX</remark>
+                                </orderinfo>
+                                
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-20 19:10:50,023 [13144] ERROR [(null)] - GetHQOrderList失败，模态CR，sPatientID：12 at SynthesizeIF.GetWebServInf
+--------------------------------------------------------------------------------
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   at SynthesizeIF.WebServices.WebServ.GetWebServInf(String strUrl, String className, String methodname)
+   at maroland.RIS.SystemInterface.HISInterface.GetHQOrderList(String sPatientID, String sModality, String sPatType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1149
+
+--------------------------------------------------------------------------------
+2016-07-20 19:18:42,051 [11788] ERROR [(null)] - GetWebServInf: strUrl:http://localhost:53134/TESTHQ1.asmx?WSDL, className:TESTHQ,methodname:getOrderByBarcode
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-20 19:18:42,059 [11788] ERROR [(null)] - GetHQOrderList失败，模态CR，sPatientID：123 at SynthesizeIF.GetData
+--------------------------------------------------------------------------------
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   at SynthesizeIF.WebServices.WebServ.GetData(Object[] oParas)
+   at maroland.RIS.SystemInterface.HISInterface.GetHQOrderList(String sPatientID, String sModality, String sPatType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1151
+
+--------------------------------------------------------------------------------
+2016-07-20 19:21:46,914 [11988] ERROR [(null)] - GetWebServInf: strUrl:http://localhost:53134/TESTHQ1.asmx?WSDL, className:TESTHQ,methodname:getOrderByBarcode at System.CheckFinalStatus
+--------------------------------------------------------------------------------
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   at System.Net.HttpWebRequest.CheckFinalStatus()
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Net.WebClient.OpenRead(String address)
+   at SynthesizeIF.WebServices.WebServ.GetWebServInf(String strUrl, String className, String methodname)
+
+--------------------------------------------------------------------------------
+2016-07-20 19:21:46,920 [11988] ERROR [(null)] - GetHQOrderList失败，模态CR，sPatientID：12 at SynthesizeIF.GetData
+--------------------------------------------------------------------------------
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   at SynthesizeIF.WebServices.WebServ.GetData(Object[] oParas)
+   at maroland.RIS.SystemInterface.HISInterface.GetHQOrderList(String sPatientID, String sModality, String sPatType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1151

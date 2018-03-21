@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="gb2312"?>
+<configuration>
+  <project ProName="GM电子单通费">
+    <Interface Name="SetOrderStatus_BackOrderOut" Desc="门诊-退单" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_BackInitOut" Desc="门诊-单据恢复到初时状态" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_SubscribeOut" Desc="门诊-预约" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_RegistOut" Desc="门诊-登记" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_ReportFinishOut" Desc="门诊-报告完成" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_VerifyOut" Desc="门诊-审核报告" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_PrintOut" Desc="门诊-已打印" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_SendOut" Desc="门诊-已发放" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderDeletedOut" Desc="门诊-删除" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	
+	<Interface Name="SetOrderStatus_BackOrderIn" Desc="住院-退单" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_BackInitIn" Desc="住院-单据恢复到初时状态" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_SubscribeIn" Desc="住院-预约" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_RegistIn" Desc="住院-登记" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_ReportFinishIn" Desc="住院-报告完成" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_VerifyIn" Desc="住院-审核报告" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_PrintIn" Desc="住院-已打印" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_SendIn" Desc="住院-已发放" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderDeletedIn" Desc="住院-删除" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	
+    <Interface Name="SetOrderStatus_BackOrderExam" Desc="体检-退单" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_BackInitExam" Desc="体检-单据恢复到初时状态" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_SubscribeExam" Desc="体检-预约" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_RegistExam" Desc="体检-登记" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_ReportFinishExam" Desc="体检-报告完成" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_VerifyExam" Desc="体检-审核报告" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_PrintExam" Desc="体检-已打印" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+	<Interface Name="SetOrderStatus_SendExam" Desc="体检-已发放" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).PatType(病人类型).modality(模态号).OpName(操作人).OpTime(操作时间).OpTime(操作时间).ClinicID(执行科室ID)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+    <Interface Name="postRISOrderDeletedPhysical" Desc="体检-删除" Return="Normal" ReturnType="bool" ReturnValue="true" SqlType="SqlUpdate" SqlSentence="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="通费方式二" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect=".自定义.OrderID(病理HIS_ID).patType(病人类型).modality(模态号)" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </Interface>
+  </project>
+  
+  <projectBase ProName="">
+    <InterfaceWebs Name="" Desc="" Return="" ReturnType="" SqlSentence="" ReturnValue="" SqlType="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <UnityTo>
+        <Unity UnityCheck="false" UnitySelect="" UnityType="" UnityData="" UnityBegin="" UnityEnd="" UnityTest="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityTo>
+      <UnityFrom>
+        <Unity UnityCheck="false" UnityName="" UnityDivide="" UnityChild="" UnityLinkName="" UnityDefine="">
+          <SubUnity SubUnitySrc="" SubUnityValue="" />
+        </Unity>
+      </UnityFrom>
+    </InterfaceWebs>
+    <InterfaceDB Name="" Desc="" Return="" ReturnType="" SqlSentence="" ReturnValue="" SqlType="" DataUrl="" DataClassName="" DataMethod="" ApplyGroupsName="" ApplyName="">
+      <Procedure Pro="false" ProOrder="last" ProType="病人ID解析" />
+      <Unity UnityCheck="false" UnityTableName="" UnityColName="" UnityLinkName="" UnityType="" UnityWhere="" UnityWhereType="" UnitySelect="" UnityDefine="" UnityVague="" UnityCont="">
+        <SubUnity SubUnitySrc="" SubUnityValue="" />
+      </Unity>
+    </InterfaceDB>
+  </projectBase>
+</configuration>

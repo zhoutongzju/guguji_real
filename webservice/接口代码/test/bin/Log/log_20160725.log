@@ -1,0 +1,159 @@
+
+--------------------------------------------------------------------------------
+2016-07-25 09:53:00,638 [7940] ERROR [(null)] - getOrderByBarcode--<?xml version="1.0" encoding="UTF-8"?><orderinfo><orderno>T599385</orderno><ordername>螺旋CT扫描（一个部位）</ordername><nametype>CT</nametype><patientid>T100674750</patientid><medrcdno>T501629</medrcdno><pname>孙红红</pname><idunum>99105757</idunum><psex>男</psex><page></page><pbirthdate>1982-11-07</pbirthdate><ptelno>18031290990</ptelno><paddress></paddress><roomno>78-303</roomno>
+<bedno>78-303090</bedno><status>已收费</status><orderlevel></orderlevel><pattype> </pattype><deptid>13153</deptid><deptname>特勤保健疗养科</deptname>
+<wardid></wardid><wardname></wardname><sheetdate>2016-07-21</sheetdate>
+<examitems>
+<oneitem>
+<itemcode>11012</itemcode>
+<itemname>颅脑CT平扫</itemname>
+<itempos>螺旋CT扫描（一个部位）</itempos>
+<itempos4organ>螺旋CT扫描（一个部位）</itempos4organ>
+</oneitem>
+<oneitem>
+<itemcode>1201</itemcode>
+<itemname>颅脑CT平扫1</itemname>
+<itempos>螺旋CT扫描（一个部位）</itempos>
+<itempos4organ>螺旋CT扫描（一个部位）</itempos4organ>
+</oneitem>
+</examitems>
+<doctorid>005014</doctorid><doctorname>傅婧</doctorname><performdeptid>13153</performdeptid><performdept>特勤保健疗养科</performdept><diagno>Z00.001</diagno><diagname>健康</diagname><chiefcomplaint>测试pacs</chiefcomplaint><symptom>测试pacs</symptom><examrequest>测试pacs</examrequest><remark></remark></orderinfo>
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-25 09:53:24,194 [7940] ERROR [(null)] - getOrderByBarcode--<?xml version="1.0" encoding="UTF-8"?><orderinfo><orderno>T599385</orderno><ordername>螺旋CT扫描（一个部位）</ordername><nametype>CT</nametype><patientid>T100674750</patientid><medrcdno>T501629</medrcdno><pname>孙红红</pname><idunum>99105757</idunum><psex>男</psex><page></page><pbirthdate>1982-11-07</pbirthdate><ptelno>18031290990</ptelno><paddress></paddress><roomno>78-303</roomno>
+<bedno>78-303090</bedno><status>已收费</status><orderlevel></orderlevel><pattype> </pattype><deptid>13153</deptid><deptname>特勤保健疗养科</deptname>
+<wardid></wardid><wardname></wardname><sheetdate>2016-07-21</sheetdate>
+<examitems>
+<oneitem>
+<itemcode>11012</itemcode>
+<itemname>颅脑CT平扫</itemname>
+<itempos>螺旋CT扫描（一个部位）</itempos>
+<itempos4organ>螺旋CT扫描（一个部位）</itempos4organ>
+</oneitem>
+<oneitem>
+<itemcode>1201</itemcode>
+<itemname>颅脑CT平扫1</itemname>
+<itempos>螺旋CT扫描（一个部位）</itempos>
+<itempos4organ>螺旋CT扫描（一个部位）</itempos4organ>
+</oneitem>
+</examitems>
+<doctorid>005014</doctorid><doctorname>傅婧</doctorname><performdeptid>13153</performdeptid><performdept>特勤保健疗养科</performdept><diagno>Z00.001</diagno><diagname>健康</diagname><chiefcomplaint>测试pacs</chiefcomplaint><symptom>测试pacs</symptom><examrequest>测试pacs</examrequest><remark></remark></orderinfo>
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-25 10:06:32,409 [15368] ERROR [(null)] - getOrderByBarcode--<?xml version="1.0" encoding="UTF-8"?><orderinfo><orderno>T599385</orderno><ordername>螺旋CT扫描（一个部位）</ordername><nametype>CT</nametype><patientid>T100674750</patientid><medrcdno>T501629</medrcdno><pname>孙红红</pname><idunum>99105757</idunum><psex>男</psex><page></page><pbirthdate>1982-11-07</pbirthdate><ptelno>18031290990</ptelno><paddress></paddress><roomno>78-303</roomno>
+<bedno>78-303090</bedno><status>已收费</status><orderlevel></orderlevel><pattype> </pattype><deptid>13153</deptid><deptname>特勤保健疗养科</deptname>
+<wardid></wardid><wardname></wardname><sheetdate>2016-07-21</sheetdate>
+<examitems>
+
+<itemcode>1201</itemcode>
+<itemname>颅脑CT平扫1</itemname>
+<itempos>螺旋CT扫描（一个部位）</itempos>
+<itempos4organ>螺旋CT扫描（一个部位）</itempos4organ>
+</oneitem>
+</examitems>
+<doctorid>005014</doctorid><doctorname>傅婧</doctorname><performdeptid>13153</performdeptid><performdept>特勤保健疗养科</performdept><diagno>Z00.001</diagno><diagname>健康</diagname><chiefcomplaint>测试pacs</chiefcomplaint><symptom>测试pacs</symptom><examrequest>测试pacs</examrequest><remark></remark></orderinfo>
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-25 10:06:32,476 [15368] ERROR [(null)] - GetHQOrderList失败，模态CT，sPatientID：T599385 at System.Xml.ParseTag
+--------------------------------------------------------------------------------
+System.Xml.XmlException: 行“4”上的开始标记“examitems”与结束标记“oneitem”不匹配。 行 10，位置 3。
+   at System.Xml.XmlTextReader.ParseTag()
+   at System.Xml.XmlTextReader.ParseBeginTagExpandCharEntities()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlValidatingReader.ReadNoCollectTextToken()
+   at System.Xml.XmlValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadChildren(XmlNode parent)
+   at System.Xml.XmlLoader.LoadElementNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadChildren(XmlNode parent)
+   at System.Xml.XmlLoader.LoadElementNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.LoadXml(String xml)
+   at maroland.RIS.SystemInterface.HISInterface.FillOrderTable(String sHisOrderXml, String sPatType, String sModality, DataTable& retDataTable) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1269
+   at maroland.RIS.SystemInterface.HISInterface.GetHQOrderList(String sPatientID, String sModality, String sPatType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1193
+
+--------------------------------------------------------------------------------
+2016-07-25 10:07:29,181 [15368] ERROR [(null)] - getOrderByBarcode--<?xml version="1.0" encoding="UTF-8"?><orderinfo><orderno>T599385</orderno><ordername>螺旋CT扫描（一个部位）</ordername><nametype>CT</nametype><patientid>T100674750</patientid><medrcdno>T501629</medrcdno><pname>孙红红</pname><idunum>99105757</idunum><psex>男</psex><page></page><pbirthdate>1982-11-07</pbirthdate><ptelno>18031290990</ptelno><paddress></paddress><roomno>78-303</roomno>
+<bedno>78-303090</bedno><status>已收费</status><orderlevel></orderlevel><pattype> </pattype><deptid>13153</deptid><deptname>特勤保健疗养科</deptname>
+<wardid></wardid><wardname></wardname><sheetdate>2016-07-21</sheetdate>
+<examitems>
+
+<itemcode>1201</itemcode>
+<itemname>颅脑CT平扫1</itemname>
+<itempos>螺旋CT扫描（一个部位）</itempos>
+<itempos4organ>螺旋CT扫描（一个部位）</itempos4organ>
+</oneitem>
+</examitems>
+<doctorid>005014</doctorid><doctorname>傅婧</doctorname><performdeptid>13153</performdeptid><performdept>特勤保健疗养科</performdept><diagno>Z00.001</diagno><diagname>健康</diagname><chiefcomplaint>测试pacs</chiefcomplaint><symptom>测试pacs</symptom><examrequest>测试pacs</examrequest><remark></remark></orderinfo>
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-25 10:07:50,386 [15368] ERROR [(null)] - GetHQOrderList失败，模态CT，sPatientID：T599385 at System.Xml.ParseTag
+--------------------------------------------------------------------------------
+System.Xml.XmlException: 行“4”上的开始标记“examitems”与结束标记“oneitem”不匹配。 行 10，位置 3。
+   at System.Xml.XmlTextReader.ParseTag()
+   at System.Xml.XmlTextReader.ParseBeginTagExpandCharEntities()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlValidatingReader.ReadNoCollectTextToken()
+   at System.Xml.XmlValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadChildren(XmlNode parent)
+   at System.Xml.XmlLoader.LoadElementNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadChildren(XmlNode parent)
+   at System.Xml.XmlLoader.LoadElementNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.LoadXml(String xml)
+   at maroland.RIS.SystemInterface.HISInterface.FillOrderTable(String sHisOrderXml, String sPatType, String sModality, DataTable& retDataTable) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1269
+   at maroland.RIS.SystemInterface.HISInterface.GetHQOrderList(String sPatientID, String sModality, String sPatType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1193
+
+--------------------------------------------------------------------------------
+2016-07-25 10:09:19,141 [15368] ERROR [(null)] - getOrderByBarcode--<?xml version="1.0" encoding="UTF-8"?><orderinfo><orderno>T599385</orderno><ordername>螺旋CT扫描（一个部位）</ordername><nametype>CT</nametype><patientid>T100674750</patientid><medrcdno>T501629</medrcdno><pname>孙红红</pname><idunum>99105757</idunum><psex>男</psex><page></page><pbirthdate>1982-11-07</pbirthdate><ptelno>18031290990</ptelno><paddress></paddress><roomno>78-303</roomno>
+<bedno>78-303090</bedno><status>已收费</status><orderlevel></orderlevel><pattype> </pattype><deptid>13153</deptid><deptname>特勤保健疗养科</deptname>
+<wardid></wardid><wardname></wardname><sheetdate>2016-07-21</sheetdate>
+<examitems>
+
+<itemcode>1201</itemcode>
+<itemname>颅脑CT平扫1</itemname>
+<itempos>螺旋CT扫描（一个部位）</itempos>
+<itempos4organ>螺旋CT扫描（一个部位）</itempos4organ>
+</oneitem>
+</examitems>
+<doctorid>005014</doctorid><doctorname>傅婧</doctorname><performdeptid>13153</performdeptid><performdept>特勤保健疗养科</performdept><diagno>Z00.001</diagno><diagname>健康</diagname><chiefcomplaint>测试pacs</chiefcomplaint><symptom>测试pacs</symptom><examrequest>测试pacs</examrequest><remark></remark></orderinfo>
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2016-07-25 10:10:04,360 [15368] ERROR [(null)] - GetHQOrderList失败，模态CT，sPatientID：T599385 at System.Xml.ParseTag
+--------------------------------------------------------------------------------
+System.Xml.XmlException: 行“4”上的开始标记“examitems”与结束标记“oneitem”不匹配。 行 10，位置 3。
+   at System.Xml.XmlTextReader.ParseTag()
+   at System.Xml.XmlTextReader.ParseBeginTagExpandCharEntities()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlValidatingReader.ReadNoCollectTextToken()
+   at System.Xml.XmlValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadChildren(XmlNode parent)
+   at System.Xml.XmlLoader.LoadElementNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadChildren(XmlNode parent)
+   at System.Xml.XmlLoader.LoadElementNode()
+   at System.Xml.XmlLoader.LoadCurrentNode()
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.LoadXml(String xml)
+   at maroland.RIS.SystemInterface.HISInterface.FillOrderTable(String sHisOrderXml, String sPatType, String sModality, DataTable& retDataTable) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1269
+   at maroland.RIS.SystemInterface.HISInterface.GetHQOrderList(String sPatientID, String sModality, String sPatType) in E:\绍兴蓝亭卫生院PACS体检接口\接口代码\HISInterface.vb:line 1193
